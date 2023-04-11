@@ -6,16 +6,21 @@ document.addEventListener("DOMContentLoaded", function () {
   const lowerHeader = document.querySelector(".lower-header");
   const userWelcome = document.querySelector(".user-welcome");
   const userSmallName = document.querySelector(".user-small-name");
+  const userSmallLogo = document.querySelector(".user-small-logo");
+  const userLogo = document.querySelector(".user-logo");
   const notification = document.querySelector(".notifications");
 
   const json =
-    '{"name": "Gabriel", "lastName": "Paneca", "userName": "@gpaneca3692", "icon": "url(../images/dog-3431913_640.jpg)"}';
-  const object = JSON.parse(json);
+    '{"name": "Gabriel", "lastName": "Paneca", "userName": "@gpaneca3692", "icon": "url(../assets/images/dog-3431913_640.jpg)"}';
+  const objectJson = JSON.parse(json);
 
-  //put the name  on the user name spaces
+  //put the name  on the user name spaces and the user ico on the buttons
   userSmallName.childNodes.item(
     1
-  ).textContent = `${object.name} ${object.lastName}`;
+  ).textContent = `${objectJson.name} ${objectJson.lastName}`;
+
+  userSmallLogo.childNodes.item(1).style.backgroundImage = objectJson.icon;
+  userLogo.style.backgroundImage = objectJson.icon;
 
   resizeScreen();
 
@@ -64,14 +69,14 @@ document.addEventListener("DOMContentLoaded", function () {
   //function for change the name in the user welcome
   function resizeScreen() {
     if (document.documentElement.clientWidth < 830) {
-      userWelcome.childNodes.item(3).textContent = `${object.name}`;
+      userWelcome.childNodes.item(3).textContent = `${objectJson.name}`;
 
       // notification.parentNode.removeChild(notification);
       // lowerHeader.insertBefore(notification, lowerHeader.children[2]);
     } else {
       userWelcome.childNodes.item(
         3
-      ).textContent = `${object.name} ${object.lastName} (${object.userName})`;
+      ).textContent = `${objectJson.name} ${objectJson.lastName} (${objectJson.userName})`;
 
       // notification.parentNode.removeChild(notification);
       // upperHeader.insertBefore(notification, upperHeader.children[2]);

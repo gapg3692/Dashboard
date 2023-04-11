@@ -83,6 +83,14 @@ aside {
   padding: 15px 0 0;
 }
 
+.logo_image {
+  width: 40px;
+  height: 40px;
+  border: none;
+  background-image: url(../images/dashboard_logo_white.svg);
+  background-size: contain;
+}
+
 .logo > p {
   font-size: 30px;
   font-weight: 900;
@@ -115,13 +123,42 @@ aside {
   );
 }
 
-.information > div > svg {
+.information > div > div {
   grid-column: 2/3;
   width: 20px;
   height: 20px;
+  border: none;
+  background-size: cover;
 }
-.information > div > svg > path {
-  fill: white;
+
+/* ***************sid menu Icons */
+
+.home > div {
+  background-image: url(../images/home_ico.svg);
+}
+.profile > div {
+  background-image: url(../images/profile_ico.svg);
+}
+.message > div {
+  background-image: url(../images/message_ico.svg);
+}
+.history > div {
+  background-image: url(../images/history_ico.svg);
+}
+.task > div {
+  background-image: url(../images/task_ico.svg);
+}
+.communities > div {
+  background-image: url(../images/communities_ico.svg);
+}
+.settings > div {
+  background-image: url(../images/settings_ico.svg);
+}
+.support > div {
+  background-image: url(../images/support_ico.svg);
+}
+.privacy > div {
+  background-image: url(../images/privacy_ico.svg);
 }
 
 .information > div > p {
@@ -136,14 +173,6 @@ aside {
   justify-content: center;
   height: 50px;
   font-size: 15px;
-}
-
-.about > svg {
-  width: 15px;
-  height: 15px;
-}
-.about > svg > path {
-  fill: white;
 }
 
 .about > p > a {
@@ -176,6 +205,26 @@ header {
 @media (max-width: 830px) {
   header {
   }
+}
+
+/* *****************open-sidebar */
+.open-sidebar {
+  display: none;
+}
+@media (max-width: 830px) {
+  .open-sidebar {
+    display: block;
+    width: 40px;
+    height: 40px;
+    z-index: 1;
+  }
+}
+.open-sidebar > button {
+  width: 40px;
+  height: 40px;
+  background-image: url(../images/open_sidebar_ico.svg);
+  border: none;
+  background-size: cover;
 }
 
 /* *********************UPPER HEADER */
@@ -220,12 +269,10 @@ header {
   margin: 0 4px;
   width: 25px;
   height: 25px;
-  border: none;
+  background-image: url(../images/search_ico.svg);
   background-color: transparent;
-}
-
-.search-bar > button > svg > path {
-  fill: black;
+  border: none;
+  background-size: cover;
 }
 
 .search-bar > input {
@@ -258,11 +305,10 @@ header {
 .notifications > button {
   width: 25px;
   height: 25px;
+  background-image: url(../images/notification_ico.svg);
   background-color: transparent;
   border: none;
-}
-.notifications > button > svg > path {
-  fill: black;
+  background-size: cover;
 }
 
 @media (max-width: 830px) {
@@ -285,7 +331,7 @@ header {
   width: 30px;
   border-radius: 50%;
   border: none;
-  background-image: url(../images/dog-3431913_640.jpg);
+  background-color: transparent;
   background-size: contain;
 }
 
@@ -318,9 +364,9 @@ header {
   width: 38px;
   border-radius: 50%;
   border: none;
-  background-image: url(../images/dog-3431913_640.jpg);
   background-size: contain;
 }
+
 .user-welcome {
   display: flex;
   flex-direction: column;
@@ -357,33 +403,17 @@ header {
   width: 25px;
   background-color: transparent;
   border: none;
+  background-size: cover;
 }
 
-.buttons-low-header > button > svg > path {
-  fill: black;
+.add {
+  background-image: url(../images/add_ico.svg);
 }
-
-/* open-sidebar */
-.open-sidebar {
-  display: none;
+.update {
+  background-image: url(../images/update_ico.svg);
 }
-@media (max-width: 830px) {
-  .open-sidebar {
-    display: block;
-    width: 40px;
-    height: 40px;
-    z-index: 1;
-  }
-}
-.open-sidebar > button {
-  width: 40px;
-  height: 40px;
-  background: none;
-  border: none;
-}
-
-.open-sidebar button > svg > path {
-  fill: black;
+.share {
+  background-image: url(../images/share_ico.svg);
 }
 
 .open {
